@@ -1,135 +1,46 @@
-import Fade from 'react-reveal/Fade';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import BadgeList from "./components/BadgeList";
-import PortfolioFeature from "./components/PortfolioFeature";
+import HomePage from './pages/HomePage';
+import PeakPage from './pages/work/PeakPage';
+import TrailsPage from './pages/work/TrailsPage';
+import BlinkPage from './pages/work/BlinkPage';
+import SitesPage from './pages/work/SitesPage';
+
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="bg-gray-900 min-h-screen p-3">
-      <div className="bg-white text-gray-900 min-h-screen rounded-md border border-transparent">
-        <div className="max-w-7xl mx-auto px-4">
+    <Router>
+      <ScrollToTop />
+      <div className="bg-gray-900 min-h-screen p-3">
+        <div className="bg-white text-gray-900 min-h-screen rounded-md border border-transparent">
+          <div className="max-w-7xl mx-auto px-4">
 
-          <header className="py-2.5 mb-6">
-              <h1 className="logo">
-                <span>NW</span>
-                <span>NW</span>
-                <span>NW</span>
-                <span>NW</span>
-                <span>NW</span>
-              </h1>
-          </header>
+            <header className="py-2.5 mb-6">
+                <h1 className="logo">
+                  <Link to="/">
+                    <span>NW</span>
+                    <span>NW</span>
+                    <span>NW</span>
+                    <span>NW</span>
+                    <span>NW</span>
+                    <span>NW</span>
+                  </Link>
+                </h1>
+            </header>
 
-          <section className="pt-20 pb-28">
-            <Fade>
-              <h1 className="h1 mb-1">
-                <span className="mr-3">👋</span> Hi! I'm Nate.
-              </h1>
-            </Fade>
-            <Fade delay={500}>
-              <p className="h2 ml-14">I build websites and applications.</p>
-            </Fade>
-          </section>
+            <Switch>
+              <Route path="/work/peak" component={PeakPage} />
+              <Route path="/work/trails" component={TrailsPage} />
+              <Route path="/work/blink" component={BlinkPage} />
+              <Route path="/work/sites" component={SitesPage} />
+              <Route path="/" component={HomePage} />
+            </Switch>
 
-          <Fade delay={1000}>
-            <section className="pb-24">
-              <div className="md:flex -mx-4">
-                <div className="md:flex-1 px-4">
-                  <h2 className="uppercase font-bold text-sm mb-4">Front-End</h2>
-                  <p className="text-xl leading-relaxed">
-                    I build SPAs and cross-platform apps with React. Recently I've been 
-                    using Tailwind CSS, but also love writing custom styles with SCSS and BEM.
-                  </p>
-                </div>
-                <div className="md:flex-1 px-4">
-                  <h2 className="uppercase font-bold text-sm mb-4">Back-End</h2>
-                  <p className="text-xl leading-relaxed">
-                    I've used PHP to create 100s of bespoke WordPress themes and plugins, 
-                    write REST APIs and server-side logic for large applications, and 
-                    used frameworks such as Laravel.
-                  </p>
-                </div>
-                <div className="md:flex-1 px-4">
-                  <h2 className="uppercase font-bold text-sm mb-4">Tooling</h2>
-                  <p className="text-xl leading-relaxed">
-                    I use Node.js to write custom CLI tools for code generation and transpiling,
-                    and am well versed in the package management ecosystem.
-                  </p>
-                </div>
-              </div>
-            </section>
-          </Fade>
-
-          <Fade delay={1000}>
-            <section className="pb-24">
-              <div className="md:flex -mx-4">
-                <div className="md:flex-1 px-4">
-                  <h2 className="h2 mb-2">Languages</h2>
-                  <BadgeList badges={["PHP", "Javascript", "HTML", "CSS"]} />
-                </div>
-                <div className="md:flex-1 px-4">
-                  <h2 className="h2 mb-2">Frameworks</h2>
-                  <BadgeList badges={["React", "Redux", "Laravel", "WordPress", "Sass", "Tailwind", "Bootstrap"]} />
-                </div>
-                <div className="md:flex-1 px-4">
-                  <h2 className="h2 mb-2">Tooling</h2>
-                  <BadgeList badges={["VS Code", "NPM", "Yarn", "Composer", "PostCSS", "BrowserSync"]} />
-                </div>
-              </div>
-            </section>
-          </Fade>
-
-          <section>
-
-            <Fade>
-              <PortfolioFeature
-                name="Peak Setter"
-                badges={[ "React", "Redux", "Capacitor", "Tailwind", "Laravel"]}
-                description="A cross-platform web and mobile application to help rock climbing gyms connect with their patrons."
-                link="/work/peak"
-                githubLink="https://github.com/nateweller"
-                className="mb-24"
-              />
-            </Fade>
-
-            <Fade>
-              <PortfolioFeature
-                image="bc-trails.jpg"
-                imageSide="right"
-                name="BC Trails Signage Application"
-                badges={[ "React", "Redux", "SVG", "Tailwind"]}
-                description="A web application that automates the process of designing trail signs, and generates print-ready vector files for Recreation Sites and Trails BC."
-                link="/work/trails"
-                className="mb-24"
-              />
-            </Fade>
-
-            <Fade>
-              <PortfolioFeature
-                image="crowdblink.jpg"
-                name="CrowdBlink"
-                badges={[ "PHP", "Javascript", "React", "Cordova"]}
-                description="Event management platform providing ticketing, access control, point of sale, analytics, and patron engagement."
-                link="/work/crowdblink"
-                className="mb-24"
-              />
-            </Fade>
-
-            <Fade>
-              <PortfolioFeature
-                image="project-forest.jpg"
-                imageSide="right"
-                name="WordPress Development"
-                badges={[ "WordPress", "PHP", "SCSS", "Bootstrap", "Javascript", "jQuery"]}
-                description="I've built 100s of custom WordPress themes and plugins over the years."
-                link="/work/wordpress"
-                className="mb-24"
-              />
-            </Fade>
-          </section>
-
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
