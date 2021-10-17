@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 
 import BadgeList from './BadgeList';
 import BrowserMockup from './BrowserMockup';
@@ -20,14 +19,12 @@ function PortfolioFeature(props) {
     } = props;
 
     const renderImageColumn = () => (
-        // <Fade delay={500}>
-            <div className="flex-auto order-1 md:flex-1 md:order-none">
-                {(image
-                    ? <BrowserMockup url={url} darkMode={true}><img src={image} alt={name} key={image} className="w-full rounded-md" /></BrowserMockup>
-                    : <div className="border-8 border-gray-900 w-full h-96" />
-                )}
-            </div>
-        // </Fade>
+        <div className="flex-auto order-1 md:flex-1 md:order-none">
+            {(image
+                ? <BrowserMockup url={url} darkMode={true}><img src={image} alt={name} key={image} className="w-full rounded-md" /></BrowserMockup>
+                : <div className="border-8 border-gray-900 w-full h-96" />
+            )}
+        </div>
     );
 
     const renderContentColumn = () => (

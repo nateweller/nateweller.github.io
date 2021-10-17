@@ -5,7 +5,18 @@ function BadgeList({ badges, className = "" }) {
 
     return (
         <div className={className}>
-            { badges.map((badge, loopIndex) => <Badge className="mr-2 mb-2" key={loopIndex}>{badge}</Badge>)}
+            { badges.map((badge, loopIndex) => {
+
+                if (typeof badge === "string") {
+                    return <Badge className="mr-2 mb-3" key={loopIndex}>{badge}</Badge>;
+                }
+                
+                if (typeof badge === "object") {
+                    return <Badge className="mr-2 mb-3" key={loopIndex} onClick={badge.onClick}>{badge.label}</Badge>;
+                }
+
+                return null;
+            }) }
         </div>
     );
 }

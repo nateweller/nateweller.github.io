@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { VscGithub } from 'react-icons/vsc';
+import { FaLinkedinIn} from 'react-icons/fa';
 
 import HomePage from './pages/HomePage';
 import PeakPage from './pages/work/PeakPage';
@@ -16,7 +18,7 @@ function App() {
         <div className="bg-white text-gray-900 min-h-screen rounded-md border border-transparent">
           <div className="max-w-7xl mx-auto px-4">
 
-            <header className="py-2.5 mb-6">
+            <header className="flex items-center py-2.5 mb-6">
                 <h1 className="logo">
                   <Link to="/">
                     <span>NW</span>
@@ -27,6 +29,21 @@ function App() {
                     <span>NW</span>
                   </Link>
                 </h1>
+
+                <div className="flex-1 text-right">
+                  <a title="LinkedIn" href="https://www.linkedin.com/in/nateweller/" className="inline-block mr-4" target="_blank" rel="noreferrer">
+                    <FaLinkedinIn className="h-5 w-5" />
+                    <span className="sr-only">
+                      LinkedIn
+                    </span>
+                  </a>
+                  <a title="GitHub" href="https://github.com/nateweller" className="inline-block mt-0.5" target="_blank" rel="noreferrer">
+                    <VscGithub className="h-6 w-6" />
+                    <span className="sr-only">
+                      GitHub
+                    </span>
+                  </a>
+                </div>
             </header>
 
             <Switch>

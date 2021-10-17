@@ -9,7 +9,7 @@ function ImageFader(props) {
         const interval = setInterval(() => setIndex(index < images.length - 1 ? index + 1 : 0), 2500);
 
         return () => clearInterval(interval);
-    }, [index]);
+    }, [index, images.length]);
 
     return (
         <div className="relative">

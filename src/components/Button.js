@@ -4,11 +4,19 @@ function Button(props) {
         children,
         className = "",
         use: Use = "button",
-        to
+        to,
+        onClick,
+        href,
+        target,
+        rel
     } = props;
 
     const conditionalProps = {
-        to
+        to,
+        onClick,
+        href,
+        target,
+        rel
     };
 
     return (
