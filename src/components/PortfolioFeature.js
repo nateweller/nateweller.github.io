@@ -19,7 +19,7 @@ function PortfolioFeature(props) {
     } = props;
 
     const renderImageColumn = () => (
-        <div className="flex-auto order-1 md:flex-1 md:order-none">
+        <div className="flex-auto order-1 mb-4 md:flex-1 md:order-none md:mb-0">
             {(image
                 ? <BrowserMockup url={url} darkMode={true}><img src={image} alt={name} key={image} className="w-full rounded-md" /></BrowserMockup>
                 : <div className="border-8 border-gray-900 w-full h-96" />
@@ -28,7 +28,7 @@ function PortfolioFeature(props) {
     );
 
     const renderContentColumn = () => (
-        <div className="flex-auto order-2 md:flex-1 md:order-none md:pl-12">
+        <div className="flex-auto order-2 md:flex-1 md:order-none">
             <div className="max-w-md">
                 <h2 className="h2 mb-2">
                     {name}
@@ -61,7 +61,7 @@ function PortfolioFeature(props) {
     );
 
     return (
-        <div className={`flex flex-wrap md:flex-nowrap md:items-center ${className}`}>
+        <div className={`flex flex-wrap md:flex-nowrap md:items-center md:space-x-12 ${className}`}>
             {imageSide === "left" && renderImageColumn()}
             {renderContentColumn()}
             {imageSide !== "left" && renderImageColumn()}

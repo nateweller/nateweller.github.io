@@ -13,7 +13,7 @@ function TrailsPage() {
                 </h1>
               </Fade>
               <Fade delay={500}>
-                <p className="h2 ml-14">
+                <p className="h2 md:ml-14">
                   The BC Trails Signage Generator allows anyone to create a print-ready, 
                   standards-compliant sign graphic.
                 </p>
@@ -23,12 +23,12 @@ function TrailsPage() {
             <section className="max-w-2xl mx-auto mt-28 mb-16">
                 <h2 className="h2 mb-4">The Problem</h2>
                 <p className="mb-16">
-                  Recreation Sites and Trails BC works with a multitude of stakeholders 
+                  Recreation Sites and Trails BC (RSTBC) works with a multitude of stakeholders 
                   across the province surrounding the production of trail signs.
                 
                   Creating these signs with traditional graphic design software, and then manually 
-                  validating that they meet the standardized formatting, was a needlessly lengthy 
-                  and error-prone process.
+                  validating that they meet the standardized formatting, was a lengthy 
+                  and sometimes error-prone process.
                 </p>
 
                 <div className="mb-16">
@@ -61,8 +61,8 @@ function TrailsPage() {
                 </p>
             </section>
 
-            <section className="flex space-x-12 my-24">
-              <div className="md:flex-1">
+            <section className="my-16 max-w-2xl mx-auto lg:flex lg:space-x-12 lg:my-24 lg:max-w-none">
+              <div className="mb-16 lg:flex-1 lg:mb-0">
                 <h2 className="h2 mb-4">Questionnaire-Style</h2>
                 <p>
                   The application determines the sign specification by running the user
@@ -72,7 +72,7 @@ function TrailsPage() {
                 </p>
               </div>
 
-              <div className="md:flex-1">
+              <div className="mb-16 lg:flex-1 lg:mb-0">
                 <h2 className="h2 mb-4">Live Preview</h2>
                 <p>
                   Thanks to the reactive nature of the application framework, and 
@@ -81,7 +81,7 @@ function TrailsPage() {
                 </p>
               </div>
 
-              <div className="md:flex-1">
+              <div className="lg:flex-1">
                 <h2 className="h2 mb-4">Highly Compatible Output</h2>
                 <p>
                   All iconography and assorted sign components were simplified down to
@@ -93,7 +93,7 @@ function TrailsPage() {
             </section>
 
 
-            <section className="max-w-2xl mx-auto my-24">
+            <section className="max-w-2xl mx-auto mt-24 mb-16">
             
               <div className="text-xs mb-16">
                 <BrowserMockup darkMode={true} language="javascript" url="SVGPermittedUserTypeCycling.js">
@@ -111,11 +111,27 @@ function TrailsPage() {
                 This web application was built with React and Redux. The state-based 
                 render cycle of React was perfect for this application - as the user 
                 enters their sign specification, an SVG is generated live on the screen 
-                via JSX.
+                via JSX. When the sign is complete, the generated SVG can be downloaded 
+                and sent to a print shop.
               </p>
             </section>
-            
 
+            <section className="max-w-2xl mx-auto my-16">
+              <h2 className="h2 mb-4">
+                The Results
+              </h2>
+              <p className="mb-4">
+                The finished application provides a simple, yet powerful tool for 
+                generating trail signage files without any technical knowledge, 
+                access to expensive graphic design software, or the need to 
+                manually reference any specifications.
+              </p>
+              <p>
+                The resulting SVG files are highly compatible with the wide variety
+                of vector-based software used at print shops across the province, 
+                and are gaurunteed to meet the standards of RSTBC.
+              </p>
+            </section>
             
         </div>
     );

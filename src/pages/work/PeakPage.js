@@ -44,15 +44,15 @@ function PeakPage() {
               </div>
             </section>
 
-            <section className="flex items-center space-x-6 my-16">
+            <section className="flex items-center space-x-12 my-16">
 
-              <div className="md:flex-1 w-4/6">
+              <div className="w-4/6">
                 <BrowserMockup language="javascript" darkMode={true}>
                   {useDataStoreItemSnippet}
                 </BrowserMockup>
               </div>
 
-              <div className="md:flex-1 md:w-2/6">
+              <div className="md:w-2/6">
                 <h2 className="h2 mb-4">
                   Hooked Up
                 </h2>
@@ -73,11 +73,17 @@ function PeakPage() {
               </h2>
             </section>
 
-            <section className="flex">
+            <section className="flex space-x-12 items-center">
               <div className="md:w-2/6">
                 <h2 className="h2 mb-4">
-                  Laravel API
+                  Powered by Laravel
                 </h2>
+                <p>
+                  The application is powered by a PHP back-end written with Laravel 8. 
+                  The server side defines the database structure and schemas, and translates 
+                  business logic into a collection of simple API commands for the front-end 
+                  application to consume.
+                </p>
               </div>
               <div className="md:w-4/6">
                 <BrowserMockup language="php" darkMode={ true }>

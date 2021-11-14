@@ -20,7 +20,7 @@ function BrowserMockup(props) {
         if (! language) return children;
 
         return (
-            <div className="max-h-96 overflow-scroll text-xs">
+            <div className="max-h-96 overflow-auto text-xs">
                 <SyntaxHighlighter language={language} style={atomOneDark} customStyle={{ backgroundColor: '#1f2937' }}>
                     {children}
                 </SyntaxHighlighter>
@@ -43,7 +43,7 @@ function BrowserMockup(props) {
                                     {...provided.draggableProps}
                                     
                                 >
-                                    <Fade>
+                                    <Fade up distance="100px">
                                         <Jello spy={wiggle} duration={1500}>
                                             <div className={`border-4 rounded-lg shadow-sm ${(darkMode ? "bg-gray-800 border-gray-800" : "bg-gray-200 border-gray-200")}`}>
                                                 <div {...provided.dragHandleProps} className={`flex items-center h-8 border-b-4 ${(darkMode ? "border-gray-800" : "border-gray-200")}`}>
