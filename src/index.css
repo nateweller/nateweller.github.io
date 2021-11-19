@@ -14,6 +14,10 @@ html {
     @apply text-2xl font-semibold;
 }
 
+.link {
+    @apply text-black font-bold underline;
+}
+
 .logo {
     @apply relative inline-block font-black text-3xl select-none;
 }

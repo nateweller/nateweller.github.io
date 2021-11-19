@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
+import { BiLinkExternal } from "react-icons/bi";
 
 import BadgeList from "../components/BadgeList";
 import BrowserMockup from "../components/BrowserMockup";
 import Button from "../components/Button";
+import Container from "../components/Container";
 import Dialog from "../components/Dialog";
 import PortfolioFeature from "../components/PortfolioFeature";
 import buttonSnippet from "../snippets/buttonSnippet";
@@ -16,7 +18,7 @@ function HomePage() {
   const [showLanguagesDialog, setShowLanguagesDialog] = useState(false);
 
   return (
-    <div>
+    <Container>
       <section className="pt-20 pb-28">
         <Fade up>
           <h1 className="h1 mb-1">
@@ -35,7 +37,7 @@ function HomePage() {
               <h2 className="uppercase font-bold text-sm mb-4">Front-End</h2>
               <p className="text-lg leading-relaxed">
                 I create web and mobile applications with 
-                modern Javascript, React, and Redux. I use
+                modern JavaScript, React, and Redux. I use
                 utility-first styling frameworks such as 
                 Tailwind CSS, or roll my own custom styles 
                 with SCSS and BEM.
@@ -44,16 +46,16 @@ function HomePage() {
             <div className="mb-12 md:flex-1 md:mb-0">
               <h2 className="uppercase font-bold text-sm mb-4">Back-End</h2>
               <p className="text-lg leading-relaxed">
-                I've been writing PHP for over 8 years, creating bespoke WordPress 
-                themes and plugins, working on REST APIs and server-side logic for 
-                large applications, and using eloquent back-end frameworks such as Laravel.
+                I've been writing PHP for over 8 years, using eloquent back-end 
+                frameworks such as Laravel, working on REST APIs and server-side logic for 
+                large applications, and creating bespoke WordPress themes and plugins.
               </p>
             </div>
             <div className="md:flex-1">
               <h2 className="uppercase font-bold text-sm mb-4">Tooling</h2>
               <p className="text-lg leading-relaxed">
                 I use Node.js to write custom CLI tools for code generation and transpiling,
-                and am well versed in the package management ecosystem.
+                and am well versed in using package managers, linters, precompilers, etc.
               </p>
             </div>
           </div>
@@ -68,7 +70,7 @@ function HomePage() {
               <BadgeList 
                 badges={[
                   "PHP", 
-                  "Javascript", 
+                  "JavaScript", 
                   "HTML", 
                   "CSS", 
                   { label: "*", onClick: () => { setShowLanguagesDialog(true) } }
@@ -81,7 +83,7 @@ function HomePage() {
             </div>
             <div className="md:flex-1">
               <h2 className="uppercase font-bold text-sm mb-4">Tooling</h2>
-              <BadgeList badges={["VS Code", "NPM", "Yarn", "Composer", "PostCSS", "BrowserSync", "Git"]} />
+              <BadgeList badges={["VS Code", "NPM", "Yarn", "Composer", "PostCSS", "BrowserSync", "Git", "Unix"]} />
             </div>
           </div>
         </section>
@@ -104,7 +106,7 @@ function HomePage() {
             image="crowdblink.jpg"
             imageSide="right"
             name="CrowdBlink"
-            badges={[ "PHP", "Javascript", "React", "Cordova"]}
+            badges={[ "PHP", "JavaScript", "React", "Cordova"]}
             description="I spent two and a half years at CrowdBlink, building an event management platform providing ticketing, access control, point of sale, analytics, and patron engagement."
             link="/work/blink"
             className="mb-24"
@@ -114,7 +116,7 @@ function HomePage() {
             image="project-forest.jpg"
             imageSide="left"
             name="WordPress Development"
-            badges={[ "WordPress", "PHP", "SCSS", "Bootstrap", "Javascript", "jQuery"]}
+            badges={[ "WordPress", "PHP", "SCSS", "Bootstrap", "JavaScript", "jQuery"]}
             description="Since 2009, I've built and deployed over 100 custom WordPress themes and plugins. Today, I build modern WordPress sites with the new Gutenberg editor and latest PHP features."
             link="/work/sites"
             className="mb-24"
@@ -135,7 +137,7 @@ function HomePage() {
 
       <section className="mb-24">
         <div className="flex flex-wrap md:flex-nowrap md:items-center">
-          <div className="flex-auto order-1 md:flex-1 md:order-none md:w-1/2">
+          <div className="flex-auto order-1 mb-4 md:mb-0 md:flex-1 md:order-none md:w-1/2 overflow-hidden">
             <BrowserMockup language="javascript" darkMode={true} url="useDataStoreItem.js">
               {useDataStoreItemSnippet}
             </BrowserMockup>
@@ -151,6 +153,7 @@ function HomePage() {
                 </p>
                 <Button use="a" href="https://github.com/nateweller/hooks">
                   View My Hooks
+                  <BiLinkExternal className="ml-2 text-lg" />
                 </Button>
               </div>
             </div>
@@ -169,11 +172,12 @@ function HomePage() {
                   Developing custom UI systems and component libraries is one of my favourite things to do.
                 </p>
                 <Button use="a" href="https://github.com/nateweller/components">
-                  View My Components
+                  View My Components 
+                  <BiLinkExternal className="ml-2 text-lg" />
                 </Button>
               </div>
             </div>
-            <div className="flex-auto order-1 md:flex-1 md:order-none md:w-1/2">
+            <div className="flex-auto order-1 mb-4 overflow-hidden md:mb-0 md:flex-1 md:order-none md:w-1/2">
               <BrowserMockup language="javascript" darkMode={true} url="Button.js">
                 {buttonSnippet}
               </BrowserMockup>
@@ -183,7 +187,7 @@ function HomePage() {
 
       <section className="mb-24">
         <div className="flex flex-wrap md:flex-nowrap md:items-center">
-          <div className="flex-auto order-1 md:flex-1 md:order-none md:w-1/2">
+          <div className="flex-auto order-1 mb-4 overflow-hidden md:mb-0 md:flex-1 md:order-none md:w-1/2">
             <BrowserMockup language="javascript" darkMode={true} url="3Sum.js">
               {leetcodeSnippet}
             </BrowserMockup>
@@ -195,11 +199,12 @@ function HomePage() {
                 </h2>
                 <p className="mb-4">
                   I enjoy practicing algorithms and data manipulation by solving 
-                  LeetCode problems. It is great way to keep sharp, and often a 
+                  LeetCode problems. It is great way to keep sharp, and is often a 
                   means to learning new ways to approach and solve logical problems.
                 </p>
                 <Button use="a" href="https://github.com/nateweller/leetcode">
-                  View My Solutions
+                  View My Solutions 
+                  <BiLinkExternal className="ml-2 text-lg" />
                 </Button>
               </div>
             </div>
@@ -224,7 +229,7 @@ function HomePage() {
         </Button>
       </Dialog>
             
-    </div>
+    </Container>
   );
 }
 

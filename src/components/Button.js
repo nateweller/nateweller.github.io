@@ -8,7 +8,8 @@ function Button(props) {
         onClick,
         href,
         target,
-        rel
+        rel,
+        dark
     } = props;
 
     const conditionalProps = {
@@ -19,13 +20,16 @@ function Button(props) {
         rel
     };
 
+    const themeClassName = dark !== undefined ? "bg-dark text-white border-white focus:ring-white" : "bg-white text-gray-900 border-gray-900 focus:ring-gray-900";
+
     return (
         <Use 
             className={`
-                inline-flex items-center px-4 py-2 border-2 border-gray-900 
-                bg-white text-sm font-medium shadow-sm text-gray-900 
-                focus:outline-none focus:ring-2 focus:ring-offset focus:ring-gray-900
-                transform hover:scale-105 hover:shadow-md transition-all
+                inline-flex items-center px-4 py-2 border-2 
+                text-sm font-medium shadow-sm
+                focus:outline-none focus:ring-2 focus:ring-offset
+                transform hover:scale-105 hover:shadow-md transition-all 
+                ${themeClassName}
                 ${className}
             `}
             {...conditionalProps}

@@ -1,12 +1,13 @@
 import Fade from "react-reveal";
 import BrowserMockup from "../../components/BrowserMockup";
 import Button from "../../components/Button";
+import Container from "../../components/Container";
 import gradingSystemControllerSnippet from "../../snippets/gradingSystemControllerSnippet";
 import useDataStoreItemSnippet from "../../snippets/useDataStoreItemSnippet";
 
 function PeakPage() {
     return (
-        <div>
+        <Container>
             <section className="pt-20 pb-28 max-w-3xl">
               <Fade>
                 <h1 className="h1 mb-1">
@@ -44,7 +45,7 @@ function PeakPage() {
               </div>
             </section>
 
-            <section className="flex items-center space-x-12 my-16">
+            <section className="flex items-center space-x-12 my-24">
 
               <div className="w-4/6">
                 <BrowserMockup language="javascript" darkMode={true}>
@@ -67,13 +68,7 @@ function PeakPage() {
 
             </section>
 
-            <section>
-              <h2 className="h2 mb-4">
-                Tailwind
-              </h2>
-            </section>
-
-            <section className="flex space-x-12 items-center">
+            <section className="flex space-x-12 items-center my-24">
               <div className="md:w-2/6">
                 <h2 className="h2 mb-4">
                   Powered by Laravel
@@ -91,7 +86,7 @@ function PeakPage() {
                 </BrowserMockup>
               </div>
             </section>
-        </div>
+        </Container>
     );
 }
 

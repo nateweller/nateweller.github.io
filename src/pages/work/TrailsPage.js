@@ -1,11 +1,12 @@
 import Fade from "react-reveal/Fade";
+import Container from "../../components/Container";
 import svgPermittedUserTypeCyclingSnippet from "../../snippets/svgPermittedUserTypeCyclingSnippet";
 import BrowserMockup from "../../components/BrowserMockup";
 import ImageFader from "../../components/ImageFader";
 
 function TrailsPage() {
     return (
-        <div>
+        <Container>
             <section className="mt-20 mb-28 max-w-2xl">
               <Fade>
                 <h1 className="h1 mb-4">
@@ -133,7 +134,7 @@ function TrailsPage() {
               </p>
             </section>
             
-        </div>
+        </Container>
     );
 }
 

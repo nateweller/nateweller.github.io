@@ -9,15 +9,16 @@ import BlinkPage from './pages/work/BlinkPage';
 import SitesPage from './pages/work/SitesPage';
 
 import ScrollToTop from './components/ScrollToTop';
+import Container from './components/Container';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <div className="bg-gray-900 min-h-screen p-3">
-        <div className="bg-white text-gray-900 min-h-screen rounded-md border border-transparent">
-          <div className="max-w-7xl mx-auto px-4">
+        <div className="bg-white text-gray-900 min-h-screen rounded-md border border-gray-900">
 
+          <Container>
             <header className="flex items-center py-2.5 mb-6">
                 <h1 className="logo">
                   <Link to="/">
@@ -45,16 +46,16 @@ function App() {
                   </a>
                 </div>
             </header>
+          </Container>
 
-            <Switch>
-              <Route path="/work/peak" component={PeakPage} />
-              <Route path="/work/trails" component={TrailsPage} />
-              <Route path="/work/blink" component={BlinkPage} />
-              <Route path="/work/sites" component={SitesPage} />
-              <Route path="/" component={HomePage} />
-            </Switch>
+          <Switch>
+            <Route path="/work/peak" component={PeakPage} />
+            <Route path="/work/trails" component={TrailsPage} />
+            <Route path="/work/blink" component={BlinkPage} />
+            <Route path="/work/sites" component={SitesPage} />
+            <Route path="/" component={HomePage} />
+          </Switch>
 
-          </div>
         </div>
       </div>
     </Router>
