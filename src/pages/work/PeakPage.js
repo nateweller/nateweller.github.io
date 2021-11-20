@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Fade from "react-reveal";
 import BrowserMockup from "../../components/BrowserMockup";
 import Button from "../../components/Button";
@@ -5,8 +6,10 @@ import Container from "../../components/Container";
 import gradingSystemControllerSnippet from "../../snippets/gradingSystemControllerSnippet";
 import useDataStoreItemSnippet from "../../snippets/useDataStoreItemSnippet";
 
+
 function PeakPage() {
     return (
+      <>
         <Container>
             <section className="pt-20 pb-28 max-w-3xl">
               <Fade>
@@ -26,23 +29,19 @@ function PeakPage() {
               </Fade>
             </section>
 
-            <section className="flex">
-              <div className="w-2/6">
-                <h2 className="h2 mb-4">
-                  Desktop... Mobile... <br />
-                  Native... Web... <br />
-                  Whatever.
-                </h2>
-                <p>
-                  Peak is built using <a href="https://capacitorjs.com/" target="_blank" rel="noreferrer">Capacitor</a>, 
-                  making it available on whatever platform best suites the user and their use case. 
-                  Browse the latest customer feedback at the front desk, organize your setting session 
-                  on a tablet, or update a climb with a mobile device. Frequent users can download the 
-                  app, while casual users can instantly access Peak simply using a web browser. 
-                </p>
-              </div>
-              <div className="w-4/6">
-              </div>
+            <section className="max-w-2xl mx-auto">
+              <h2 className="h2 mb-4">
+                Desktop... Mobile...
+                Native... Web...
+                Whatever.
+              </h2>
+              <p>
+                Peak is built using <a href="https://capacitorjs.com/" target="_blank" rel="noreferrer">Capacitor</a>, 
+                making it available on whatever platform best suites the user and their use case. 
+                Browse the latest customer feedback at the front desk, organize your setting session 
+                on a tablet, or update a climb with a mobile device. Frequent users can download the 
+                app, while casual users can instantly access Peak simply using a web browser. 
+              </p>
             </section>
 
             <section className="flex items-center space-x-12 my-24">
@@ -87,6 +86,12 @@ function PeakPage() {
               </div>
             </section>
         </Container>
+        <nav className="bg-gray-900 p-4 text-center text-white">
+          <Button dark use={Link} to="/">
+            Take Me Home
+          </Button>
+        </nav>
+      </>
     );
 }
 

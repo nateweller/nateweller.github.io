@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
 import { BiLinkExternal } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 import BadgeList from "../components/BadgeList";
 import BrowserMockup from "../components/BrowserMockup";
@@ -102,15 +103,41 @@ function HomePage() {
             className="mb-24"
           />
 
-          <PortfolioFeature
-            image="crowdblink.jpg"
-            imageSide="right"
-            name="CrowdBlink"
-            badges={[ "PHP", "JavaScript", "React", "Cordova"]}
-            description="I spent two and a half years at CrowdBlink, building an event management platform providing ticketing, access control, point of sale, analytics, and patron engagement."
-            link="/work/blink"
-            className="mb-24"
-          />
+          <div className={`flex flex-wrap md:flex-nowrap md:items-center md:space-x-12 mb-24`}>
+            <div className="flex-auto order-2 md:flex-1 md:order-none">
+              <div className="max-w-md">
+                  <h2 className="h2 mb-2">
+                      CrowdBlink
+                  </h2>
+
+                  <BadgeList 
+                      badges={[ "PHP", "JavaScript", "React", "Cordova"]} 
+                      className="mb-2"
+                  />
+                  
+                  <p className="mb-6">
+                      I spent two and a half years at CrowdBlink, building an event management platform providing ticketing, access control, point of sale, analytics, and patron engagement.
+                  </p>
+
+                  <Button use={Link} to="/work/blink" className="mr-3">
+                      View Project
+                  </Button>
+              </div>
+            </div>
+            <div className="relative flex-auto order-1 mb-4 md:flex-1 md:order-none md:mb-0">
+                <BrowserMockup darkMode={true}>
+                  <img src="crowdblink.jpg" alt="CrowdBlink" key="crowdblink.jpg" className="w-full rounded-md" />
+                </BrowserMockup>
+                <div className="absolute right-6 -bottom-4 lg:-bottom-4 space-x-4">
+                  <Fade up delay={500}>
+                    <img src="crowdblink-phone.png" className="inline-block h-48 lg:h-64" alt="" />
+                  </Fade>
+                  <Fade up delay={1000}>
+                    <img src="crowdblink-terminal.png" className="inline-block h-48 lg:h-64" alt="" />
+                  </Fade>
+                </div>
+            </div>
+          </div>
 
           <PortfolioFeature
             image="project-forest.jpg"

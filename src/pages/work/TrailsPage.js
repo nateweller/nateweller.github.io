@@ -1,4 +1,6 @@
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 import Container from "../../components/Container";
 import svgPermittedUserTypeCyclingSnippet from "../../snippets/svgPermittedUserTypeCyclingSnippet";
 import BrowserMockup from "../../components/BrowserMockup";
@@ -6,6 +8,7 @@ import ImageFader from "../../components/ImageFader";
 
 function TrailsPage() {
     return (
+      <>
         <Container>
             <section className="mt-20 mb-28 max-w-2xl">
               <Fade>
@@ -135,6 +138,14 @@ function TrailsPage() {
             </section>
             
         </Container>
+        
+        <nav className="bg-gray-900 p-4 text-center text-white">
+          <Button dark use={Link} to="/work/blink">
+            Next Up: CrowdBlink
+          </Button>
+        </nav>
+
+      </>
     );
 }
 
