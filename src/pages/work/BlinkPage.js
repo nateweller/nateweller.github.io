@@ -10,9 +10,7 @@ function BlinkPage() {
                 <section className="mt-28 mb-28">
                     <Fade>
                         <h1 className="h1 mb-1">
-                            <span className="mr-4">
-                                🍺
-                            </span>                  
+                            <img src="/assets/emoji/beer.png" alt="Beer Emoji" className="inline-block align-top w-10 mr-4" />
                             Highly critical transactions.
                         </h1>
                     </Fade>
@@ -22,7 +20,7 @@ function BlinkPage() {
                 </section>
 
                 <section className="max-w-2xl mx-auto my-16">
-                    <img src="/concert.jpg" alt="" className="w-full h-60 md:h-96 object-cover rounded-md mb-8" />
+                    <img src="/assets/work/blink/concert.jpg" alt="" className="w-full h-60 md:h-96 object-cover rounded-md mb-8" />
                     <h2 className="h2 mb-4">The Story</h2>
                     <p className="mb-4">
                         I spent two and a half years helping CrowdBlink build and deploy their 
@@ -47,7 +45,7 @@ function BlinkPage() {
                 </section>
 
                 <section className="max-w-2xl mx-auto my-16">
-                    <img src="/taste-of-edmonton.jpg" alt="" className="w-full h-60 md:h-96 object-cover rounded-md mb-8" />
+                    <img src="/assets/work/blink/taste-of-edmonton.jpg" alt="" className="w-full h-60 md:h-96 object-cover rounded-md mb-8" />
                     <h2 className="h2 mb-4">The Tech</h2>
                     <p className="mb-4">
                         The CrowdBlink platform aims to provide live events with technology 

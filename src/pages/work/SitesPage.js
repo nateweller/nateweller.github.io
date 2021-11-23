@@ -12,9 +12,7 @@ function SitesPage() {
                 <section className="mt-20 mb-28">
                     <Fade>
                         <h1 className="h1 mb-2">
-                            <span className="mr-4">
-                                🚀
-                            </span>                  
+                            <img src="/assets/emoji/rocket.png" alt="Rocket Emoji" className="inline-block align-top w-10 mr-4" />             
                             100+ custom themes and plugins in production.
                         </h1>
                     </Fade>
@@ -90,7 +88,7 @@ function SitesPage() {
                     </div>
                     <div className="md:flex-1">
                         <BrowserMockup darkMode={true}>
-                            <img src="/habot.jpg" alt="Node.js CLI Demo" />
+                            <img src="/assets/work/sites/habot.jpg" alt="Node.js CLI Demo" />
                         </BrowserMockup>
                     </div>
                 </section>

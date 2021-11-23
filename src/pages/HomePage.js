@@ -23,11 +23,12 @@ function HomePage() {
       <section className="pt-20 pb-28">
         <Fade up>
           <h1 className="h1 mb-1">
-            <span className="mr-3">👋</span> Hi! I'm Nate.
+            <img src="/assets/emoji/wave.png" alt="Waving Hand Emoji" className="inline-block align-top w-9 mr-3" />
+            Hi! I'm Nate.
           </h1>
         </Fade>
         <Fade up delay={500}>
-          <p className="h2 ml-14">I build websites and applications.</p>
+          <p className="h2 ml-12">I build websites and applications.</p>
         </Fade>
       </section>
 
@@ -94,7 +95,7 @@ function HomePage() {
         <section>
 
           <PortfolioFeature
-            image="bc-trails.jpg"
+            image="/assets/work/trails/bc-trails.jpg"
             imageSide="left"
             name="BC Trails Signage Application"
             badges={[ "React", "Redux", "Tailwind", "SVG"]}
@@ -126,21 +127,21 @@ function HomePage() {
             </div>
             <div className="relative flex-auto order-1 mb-4 md:flex-1 md:order-none md:mb-0">
                 <BrowserMockup darkMode={true}>
-                  <img src="crowdblink.jpg" alt="CrowdBlink" key="crowdblink.jpg" className="w-full rounded-md" />
+                  <img src="/assets/work/blink/crowdblink-protect.jpg" alt="CrowdBlink" key="crowdblink.jpg" className="w-full rounded-md" />
                 </BrowserMockup>
                 <div className="absolute right-6 -bottom-4 lg:-bottom-4 space-x-4">
-                  <Fade up delay={500}>
-                    <img src="crowdblink-phone.png" className="inline-block h-48 lg:h-64" alt="" />
+                  <Fade up>
+                    <img src="/assets/work/blink/crowdblink-patron.png" className="inline-block h-48 lg:h-64" alt="" />
                   </Fade>
-                  <Fade up delay={1000}>
-                    <img src="crowdblink-terminal.png" className="inline-block h-48 lg:h-64" alt="" />
+                  <Fade up delay={250}>
+                    <img src="/assets/work/blink/crowdblink-point.png" className="inline-block h-48 lg:h-64" alt="" />
                   </Fade>
                 </div>
             </div>
           </div>
 
           <PortfolioFeature
-            image="project-forest.jpg"
+            image="/assets/work/sites/project-forest.jpg"
             imageSide="left"
             name="WordPress Development"
             badges={[ "WordPress", "PHP", "SCSS", "Bootstrap", "JavaScript", "jQuery"]}
@@ -150,7 +151,7 @@ function HomePage() {
           />
 
           <PortfolioFeature
-            image="/peak.jpg"
+            image="/assets/work/peak/peak.jpg"
             imageSide="right"
             name="Peak Setter (WIP)"
             badges={[ "React", "Redux", "Capacitor", "Tailwind", "Laravel"]}

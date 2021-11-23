@@ -13,7 +13,8 @@ function TrailsPage() {
             <section className="mt-20 mb-28 max-w-2xl">
               <Fade>
                 <h1 className="h1 mb-4">
-                  <span className="mr-3">🚧</span> Making sense of making signs.
+                  <img src="/assets/emoji/sign.png" alt="Sign Emoji" className="inline-block align-top w-10 mr-3" />
+                  Making sense of making signs.
                 </h1>
               </Fade>
               <Fade delay={500}>
@@ -39,15 +40,15 @@ function TrailsPage() {
                   <BrowserMockup darkMode={true}>
                     <ImageFader 
                       images={[
-                        "/trails-1.jpg", 
-                        "/trails-2.jpg",
-                        "/trails-3.jpg",
-                        "/trails-4.jpg",
-                        "/trails-5.jpg",
-                        "/trails-6.jpg",
-                        "/trails-7.jpg",
-                        "/trails-8.jpg",
-                        "/trails-9.jpg"
+                        "/assets/work/trails/trails-1.jpg", 
+                        "/assets/work/trails/trails-2.jpg",
+                        "/assets/work/trails/trails-3.jpg",
+                        "/assets/work/trails/trails-4.jpg",
+                        "/assets/work/trails/trails-5.jpg",
+                        "/assets/work/trails/trails-6.jpg",
+                        "/assets/work/trails/trails-7.jpg",
+                        "/assets/work/trails/trails-8.jpg",
+                        "/assets/work/trails/trails-9.jpg"
                       ]} 
                     />
                   </BrowserMockup>

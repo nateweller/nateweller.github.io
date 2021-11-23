@@ -14,7 +14,8 @@ function PeakPage() {
             <section className="pt-20 pb-28 max-w-3xl">
               <Fade>
                 <h1 className="h1 mb-1">
-                  <span className="mr-3">🧗</span> Helping routesetters set routes.
+                  <img src="/assets/emoji/climber.png" alt="Rock Climber Emoji" className="inline-block align-top w-10 mr-4" />
+                  Helping routesetters set routes.
                 </h1>
               </Fade>
               <Fade delay={500}>
